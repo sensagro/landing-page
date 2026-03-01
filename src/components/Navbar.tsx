@@ -16,7 +16,6 @@ const navLinks = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Why AquaSat", href: "#why" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -56,7 +55,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="hero" size="sm" asChild>
-            <a href="#why" onClick={(e) => smoothScroll(e, "#why")}>Why AquaSat</a>
+            <a href="#contact" onClick={(e) => smoothScroll(e, "#contact")}>Contact Us</a>
           </Button>
         </nav>
 
@@ -87,8 +86,8 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="hero" size="sm" className="w-full" asChild>
-            <a href="#why" onClick={(e) => { smoothScroll(e, "#why"); setMobileOpen(false); }}>
-              Why AquaSat
+            <a href="#contact" onClick={(e) => { smoothScroll(e, "#contact"); setMobileOpen(false); }}>
+              Contact Us
             </a>
           </Button>
         </motion.div>
