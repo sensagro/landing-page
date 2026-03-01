@@ -5,6 +5,7 @@ import { FormField } from "./FormField";
 import { BenefitItem } from "./BenefitItem";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 import type { ContactFormData } from "@/types";
 
 const initialFormData: ContactFormData = {
@@ -14,18 +15,14 @@ const initialFormData: ContactFormData = {
   message: "",
 };
 
-const benefits = [
-  "Free pilot program for early adopters",
-  "Installation support included",
-  "No long-term contracts required",
-];
-
 export const ContactForm = () => {
+  const { translations } = useLanguage();
+  const { contact } = translations;
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll get back to you soon.");
+    toast.success(contact.form.success);
     setFormData(initialFormData);
   };
 
@@ -42,17 +39,18 @@ export const ContactForm = () => {
         transition={{ duration: 0.6 }}
       >
         <p className="text-primary font-display font-medium tracking-widest uppercase text-sm mb-3">
-          Get Started
+          {contact.label}
         </p>
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-          Ready to <span className="text-gradient">Modernize</span> Your Farm?
+          {contact.title}{" "}
+          <span className="text-gradient">{contact.titleHighlight}</span>{" "}
+          {contact.titleSuffix}
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-          Whether you manage 50 or 50,000 head of cattle, our satellite sensors scale with your
-          operation. Get in touch for a demo or pricing.
+          {contact.description}
         </p>
         <div className="space-y-4 text-muted-foreground">
-          {benefits.map((benefit) => (
+          {contact.benefits.map((benefit) => (
             <BenefitItem key={benefit} text={benefit} />
           ))}
         </div>
@@ -68,41 +66,41 @@ export const ContactForm = () => {
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <FormField
-            label="Name"
+            label={contact.form.name}
             name="name"
             value={formData.name}
             onChange={(value) => updateField("name", value)}
-            placeholder="Your name"
+            placeholder={contact.form.namePlaceholder}
             required
           />
           <FormField
-            label="Email"
+            label={contact.form.email}
             name="email"
             type="email"
             value={formData.email}
             onChange={(value) => updateField("email", value)}
-            placeholder="you@farm.com"
+            placeholder={contact.form.emailPlaceholder}
             required
           />
         </div>
         <FormField
-          label="Farm / Company"
+          label={contact.form.farm}
           name="farm"
           value={formData.farm}
           onChange={(value) => updateField("farm", value)}
-          placeholder="Your farm or company name"
+          placeholder={contact.form.farmPlaceholder}
         />
         <FormField
-          label="Message"
+          label={contact.form.message}
           name="message"
           type="textarea"
           value={formData.message}
           onChange={(value) => updateField("message", value)}
-          placeholder="Tell us about your operation..."
+          placeholder={contact.form.messagePlaceholder}
         />
         <Button variant="hero" size="lg" type="submit" className="w-full">
           <Send className="w-4 h-4" />
-          Send Message
+          {contact.form.submit}
         </Button>
       </motion.form>
     </div>

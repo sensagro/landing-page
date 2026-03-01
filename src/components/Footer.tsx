@@ -1,11 +1,15 @@
 import { Logo } from "@/components/common/Logo";
 import { smoothScroll } from "@/utils/smoothScroll";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { translations } = useLanguage();
+  const { footer } = translations;
+
   const footerLinks = [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Contact", href: "#contact" },
+    { label: footer.links.features, href: "#features" },
+    { label: footer.links.howItWorks, href: "#how-it-works" },
+    { label: footer.links.contact, href: "#contact" },
   ];
 
   return (
@@ -14,7 +18,7 @@ const Footer = () => {
         <div>
           <Logo />
           <p className="text-muted-foreground text-sm mt-1">
-            Satellite water monitoring for modern farms.
+            {footer.tagline}
           </p>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
@@ -30,7 +34,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-muted-foreground text-xs">
-          © {new Date().getFullYear()} AquaSat. Buenos Aires, Argentina.
+          © {new Date().getFullYear()} AquaSat. {footer.copyright}
         </p>
       </div>
     </footer>

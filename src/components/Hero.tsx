@@ -2,14 +2,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BackgroundImage } from "@/components/common/BackgroundImage";
 import { smoothScroll } from "@/utils/smoothScroll";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-sensor.jpg";
 
 const Hero = () => {
+  const { translations } = useLanguage();
+  const { hero } = translations;
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <BackgroundImage
         src={heroImage}
-        alt="Smart water sensor on Argentine farmland at sunset"
+        alt={hero.imageAlt}
         gradientOverlay="to-r"
       />
 
@@ -22,7 +26,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <p className="text-primary font-display font-medium tracking-widest uppercase text-sm mb-4">
-                Satellite-Powered Farm Monitoring
+                {hero.label}
               </p>
             </motion.div>
 
@@ -32,9 +36,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6"
             >
-              Never Let Your{" "}
-              <span className="text-gradient glow-text">Cattle</span> Run Out
-              of Water
+              {hero.title}{" "}
+              <span className="text-gradient glow-text">{hero.titleHighlight}</span>{" "}
+              {hero.titleSuffix}
             </motion.h1>
 
             <motion.p
@@ -43,9 +47,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed"
             >
-              Smart satellite sensors that monitor water trough levels in real
-              time — no towers, no wires, no limits. Built for the Argentine
-              campo.
+              {hero.description}
             </motion.p>
 
             <motion.div
@@ -56,12 +58,12 @@ const Hero = () => {
             >
               <Button variant="hero" size="lg" asChild>
                 <a href="#contact" onClick={(e) => smoothScroll(e, "#contact")}>
-                  Request a Demo
+                  {hero.ctaDemo}
                 </a>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
                 <a href="#how-it-works" onClick={(e) => smoothScroll(e, "#how-it-works")}>
-                  How It Works
+                  {hero.ctaHowItWorks}
                 </a>
               </Button>
             </motion.div>

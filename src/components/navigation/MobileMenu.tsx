@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "./NavLink";
-import { navLinks } from "@/utils/constants";
+import { getNavLinks } from "@/utils/constants";
 import { smoothScroll } from "@/utils/smoothScroll";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -10,6 +11,9 @@ interface MobileMenuProps {
 }
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  const { translations } = useLanguage();
+  const navLinks = getNavLinks(translations);
+
   if (!isOpen) return null;
 
   return (
@@ -29,7 +33,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             onClose();
           }}
         >
-          Contact Us
+          {translations.nav.contactUs}
         </a>
       </Button>
     </motion.div>
