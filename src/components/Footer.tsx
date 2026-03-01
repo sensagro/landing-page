@@ -1,19 +1,33 @@
+import { Logo } from "@/components/common/Logo";
+import { smoothScroll } from "@/utils/smoothScroll";
+
 const Footer = () => {
+  const footerLinks = [
+    { label: "Features", href: "#features" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
     <footer className="section-padding pb-10 pt-16 border-t border-border/30">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <a href="#" className="font-display font-bold text-xl tracking-tight">
-            <span className="text-primary">Aqua</span>Sat
-          </a>
+          <Logo />
           <p className="text-muted-foreground text-sm mt-1">
             Satellite water monitoring for modern farms.
           </p>
         </div>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-          <a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a>
-          <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+          {footerLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => smoothScroll(e, link.href)}
+              className="hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
         <p className="text-muted-foreground text-xs">
           © {new Date().getFullYear()} AquaSat. Buenos Aires, Argentina.

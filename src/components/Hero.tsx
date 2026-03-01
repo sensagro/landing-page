@@ -1,28 +1,18 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { BackgroundImage } from "@/components/common/BackgroundImage";
+import { smoothScroll } from "@/utils/smoothScroll";
 import heroImage from "@/assets/hero-sensor.jpg";
-
-const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-  e.preventDefault();
-  const target = document.querySelector(href);
-  if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-};
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Smart water sensor on Argentine farmland at sunset"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-      </div>
+      <BackgroundImage
+        src={heroImage}
+        alt="Smart water sensor on Argentine farmland at sunset"
+        gradientOverlay="to-r"
+      />
 
-      {/* Content */}
       <div className="relative z-10 section-padding w-full">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-2xl">
@@ -65,17 +55,20 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button variant="hero" size="lg" asChild>
-                <a href="#contact" onClick={(e) => smoothScroll(e, "#contact")}>Request a Demo</a>
+                <a href="#contact" onClick={(e) => smoothScroll(e, "#contact")}>
+                  Request a Demo
+                </a>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <a href="#how-it-works" onClick={(e) => smoothScroll(e, "#how-it-works")}>How It Works</a>
+                <a href="#how-it-works" onClick={(e) => smoothScroll(e, "#how-it-works")}>
+                  How It Works
+                </a>
               </Button>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
