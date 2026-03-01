@@ -145,4 +145,10 @@ export const en = {
       contact: "Contact",
     },
   },
+  meta: {
+    title: "AquaSat — Satellite Water Monitoring for Farms",
+    description: "Satellite-powered water level sensors for cattle farms. Monitor troughs in real time with no infrastructure needed.",
+    ogTitle: "AquaSat — Satellite Water Monitoring",
+    ogDescription: "Smart satellite sensors that monitor water trough levels in real time for Argentine farms.",
+  },
 } as const;

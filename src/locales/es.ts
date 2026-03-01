@@ -74,7 +74,7 @@ export const es = {
         number: "03",
         title: "Monitoreá",
         description:
-          "Ved los niveles de agua en tiempo real desde tu celular o computadora. Recibí alertas antes de que los bebederos se vacíen.",
+          "Mira los niveles de agua en tiempo real desde tu celular o computadora. Recibí alertas antes de que los bebederos se vacíen.",
       },
     ] as Step[],
   },
@@ -107,7 +107,7 @@ export const es = {
         icon: TrendingUp,
         title: "Prevení Pérdidas Antes de que Ocurran",
         description:
-          "Las alertas de nivel de agua en tiempo real te permiten actuar antes de que los bebederos se sequen. Protegé tu rodeo, reducí viajes de trabajo y ganá tranquilidad desde cualquier lugar.",
+          "Las alertas de nivel de agua en tiempo real te permiten actuar antes de que los bebederos se sequen. Protegé tu ganado, reducí viajes de trabajo y ganá tranquilidad desde cualquier lugar.",
       },
     ] as Reason[],
   },
@@ -144,5 +144,11 @@ export const es = {
       howItWorks: "Cómo Funciona",
       contact: "Contacto",
     },
+  },
+  meta: {
+    title: "AquaSat — Monitoreo Satelital de Agua para Campos",
+    description: "Sensores satelitales de nivel de agua para campos ganaderos. Monitoreá bebederos en tiempo real sin infraestructura necesaria.",
+    ogTitle: "AquaSat — Monitoreo Satelital de Agua",
+    ogDescription: "Sensores satelitales inteligentes que monitorean los niveles de agua en tiempo real para campos argentinos.",
   },
 } as const;

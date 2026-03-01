@@ -3,6 +3,7 @@ import { getLanguage, setLanguage, initLanguage, type Language } from "@/utils/i
 import { en } from "@/locales/en";
 import { es } from "@/locales/es";
 import type { Translations } from "@/utils/i18n";
+import { MetaTags } from "@/components/MetaTags";
 
 interface LanguageContextType {
   language: Language;
@@ -14,7 +15,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Initialize on first render - defaults to Spanish
     initLanguage();
     return getLanguage();
   });
@@ -28,6 +28,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <LanguageContext.Provider value={{ language, translations, setLanguage: handleSetLanguage }}>
+      <MetaTags />
       {children}
     </LanguageContext.Provider>
   );
