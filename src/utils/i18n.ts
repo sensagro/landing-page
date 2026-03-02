@@ -3,7 +3,6 @@ import { es } from "@/locales/es";
 
 export type Language = "en" | "es";
 
-// Utility type to convert string literals to string while preserving structure
 type DeepStringify<T> = T extends string
   ? string
   : T extends Function

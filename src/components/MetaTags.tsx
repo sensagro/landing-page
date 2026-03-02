@@ -5,10 +5,7 @@ export const MetaTags = () => {
   const { language, translations } = useLanguage();
 
   useEffect(() => {
-    // Update document title immediately
     document.title = translations.meta.title;
-
-    // Update html lang attribute
     document.documentElement.lang = language;
 
     let metaDescription = document.querySelector('meta[name="description"]');

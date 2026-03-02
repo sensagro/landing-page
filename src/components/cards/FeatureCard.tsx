@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { IconCard } from "@/components/common/IconCard";
 import type { Feature } from "@/types";
 
