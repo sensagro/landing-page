@@ -34,7 +34,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-muted-foreground text-xs">
-          © {new Date().getFullYear()} AquaSat. {footer.copyright}
+          © {new Date().getFullYear()} algrOT. {footer.copyright}
         </p>
       </div>
     </footer>

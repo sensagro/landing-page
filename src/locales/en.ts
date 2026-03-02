@@ -5,7 +5,7 @@ export const en = {
   nav: {
     features: "Features",
     howItWorks: "How It Works",
-    whyAquaSat: "Why AquaSat",
+    whyAquaSat: "Why algrOT",
     contactUs: "Contact Us",
   },
   hero: {
@@ -79,7 +79,7 @@ export const en = {
     ] as Step[],
   },
   whyAquaSat: {
-    label: "Why AquaSat",
+    label: "Why algrOT",
     title: "The Smartest Way to",
     titleHighlight: "Monitor Water",
     description:
