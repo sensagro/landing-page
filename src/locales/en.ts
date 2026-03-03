@@ -15,7 +15,7 @@ export const en = {
     titleSuffix: "Run Out of Water",
     description:
       "Smart satellite sensors that monitor water trough levels in real time — no towers, no wires, no limits. Built for the Argentine campo.",
-    ctaDemo: "Request a Demo",
+    ctaDemo: "Get in Touch",
     ctaHowItWorks: "How It Works",
     imageAlt: "Smart water sensor on Argentine farmland at sunset",
   },
@@ -117,9 +117,8 @@ export const en = {
     titleHighlight: "Modernize",
     titleSuffix: "Your Farm?",
     description:
-      "Whether you manage 50 or 50,000 head of cattle, our satellite sensors scale with your operation. Get in touch for a demo or pricing.",
+      "Whether you manage 50 or 50,000 head of cattle, we'd love to hear from you. Get in touch to learn more or express your interest.",
     benefits: [
-      "Free pilot program for early adopters",
       "Installation support included",
       "No long-term contracts required",
     ],

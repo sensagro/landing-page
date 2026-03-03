@@ -15,7 +15,7 @@ export const es = {
     titleSuffix: "se quede sin agua",
     description:
       "Sensores satelitales inteligentes que monitorean los niveles de agua en tiempo real — sin torres, sin cables, sin límites. Hecho para el campo argentino.",
-    ctaDemo: "Pedí una Demo",
+    ctaDemo: "Contactanos",
     ctaHowItWorks: "Cómo Funciona",
     imageAlt: "Sensor de agua inteligente en campo argentino al atardecer",
   },
@@ -117,9 +117,8 @@ export const es = {
     titleHighlight: "Modernizar",
     titleSuffix: "tu Campo?",
     description:
-      "Ya sea que manejes 50 o 50,000 cabezas de ganado, nuestros sensores satelitales escalan con tu operación. Contactanos para una demo o precios.",
+      "Ya sea que manejes 50 o 50,000 cabezas de ganado, nos encantaría saber de vos. Contactanos para más información o para expresar tu interés.",
     benefits: [
-      "Programa piloto gratuito para adoptantes tempranos",
       "Soporte de instalación incluido",
       "No se requieren contratos a largo plazo",
     ],
