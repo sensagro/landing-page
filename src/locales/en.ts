@@ -134,6 +134,7 @@ export const en = {
       messagePlaceholder: "Tell us about your operation...",
       submit: "Send Message",
       success: "Message sent! We'll get back to you soon.",
+      error: "Oops, seems our system isn't working right now. Please try again later.",
     },
   },
   footer: {

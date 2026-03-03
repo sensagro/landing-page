@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { FormField } from "./FormField";
 import { BenefitItem } from "./BenefitItem";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { saveContact } from "@/services/contact";
 import type { ContactFormData } from "@/types";
 
 const initialFormData: ContactFormData = {
@@ -19,11 +20,22 @@ export const ContactForm = () => {
   const { translations } = useLanguage();
   const { contact } = translations;
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(contact.form.success);
-    setFormData(initialFormData);
+    setIsSubmitting(true);
+
+    const result = await saveContact(formData);
+
+    if (result.success) {
+      toast.success(contact.form.success);
+      setFormData(initialFormData);
+    } else {
+      toast.error(contact.form.error);
+    }
+
+    setIsSubmitting(false);
   };
 
   const updateField = (field: keyof ContactFormData, value: string) => {
@@ -98,8 +110,18 @@ export const ContactForm = () => {
           onChange={(value) => updateField("message", value)}
           placeholder={contact.form.messagePlaceholder}
         />
-        <Button variant="hero" size="lg" type="submit" className="w-full">
-          <Send className="w-4 h-4" />
+        <Button
+          variant="hero"
+          size="lg"
+          type="submit"
+          className="w-full"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <Loader2 className="w-4 h-4 animate-spin" />
+          ) : (
+            <Send className="w-4 h-4" />
+          )}
           {contact.form.submit}
         </Button>
       </motion.form>

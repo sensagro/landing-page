@@ -30,7 +30,11 @@ cd landing-page
 # Step 3: Install the necessary dependencies
 npm i
 
-# Step 4: Start the development server
+# Step 4: Configure env variables
+cp .env.example .env
+# Edit .env and add your API keys and variables
+
+# Step 5: Start the development server
 npm run dev
 ```
 
