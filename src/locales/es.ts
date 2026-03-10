@@ -146,9 +146,9 @@ export const es = {
     },
   },
   meta: {
-    title: "AquaSat — Monitoreo Satelital de Agua para Campos",
+    title: "Sensagro",
     description: "Sensores satelitales de nivel de agua para campos ganaderos. Monitoreá bebederos en tiempo real sin infraestructura necesaria.",
-    ogTitle: "AquaSat — Monitoreo Satelital de Agua",
+    ogTitle: "Sensagro",
     ogDescription: "Sensores satelitales inteligentes que monitorean los niveles de agua en tiempo real para campos argentinos.",
   },
 } as const;
