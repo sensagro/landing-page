@@ -1,6 +1,6 @@
-# AquaSat Landing Page
+# Sensagro Landing Page
 
-Landing page for AquaSat - Satellite water monitoring for farms.
+Landing page for Sensagro - Satellite water monitoring for farms.
 
 ## Technologies
 

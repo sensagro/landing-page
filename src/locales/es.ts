@@ -83,13 +83,13 @@ export const es = {
     title: "La Forma Más Inteligente de",
     titleHighlight: "Monitorear Agua",
     description:
-      "Las soluciones tradicionales fallan en áreas remotas. AquaSat fue construido específicamente para los desafíos de la ganadería argentina a gran escala.",
+      "Las soluciones tradicionales fallan en áreas remotas. Sensagro fue construido específicamente para los desafíos de la ganadería argentina a gran escala.",
     reasons: [
       {
         icon: Wifi,
         title: "Sin Infraestructura Necesaria",
         description:
-          "A diferencia de las soluciones LoRa o celulares, AquaSat usa conectividad satelital. Sin torres, sin repetidores — solo instalá y listo, incluso en los potreros más remotos.",
+          "A diferencia de las soluciones LoRa o celulares, Sensagro usa conectividad satelital. Sin torres, sin repetidores — solo instalá y listo, incluso en los potreros más remotos.",
       },
       {
         icon: Zap,

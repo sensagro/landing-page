@@ -83,13 +83,13 @@ export const en = {
     title: "The Smartest Way to",
     titleHighlight: "Monitor Water",
     description:
-      "Traditional solutions fail in remote areas. AquaSat was built specifically for the challenges of large-scale Argentine farming.",
+      "Traditional solutions fail in remote areas. Sensagro was built specifically for the challenges of large-scale Argentine farming.",
     reasons: [
       {
         icon: Wifi,
         title: "No Infrastructure Needed",
         description:
-          "Unlike LoRa or cellular solutions, AquaSat uses satellite connectivity. No towers, no repeaters — just install and go, even in the most remote paddocks.",
+          "Unlike LoRa or cellular solutions, Sensagro uses satellite connectivity. No towers, no repeaters — just install and go, even in the most remote paddocks.",
       },
       {
         icon: Zap,
