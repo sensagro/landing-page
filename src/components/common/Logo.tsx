@@ -11,7 +11,7 @@ export const Logo = ({ className = "" }: LogoProps) => {
       onClick={(e) => smoothScroll(e, "#")}
       className={`font-display font-bold text-xl tracking-tight ${className}`}
     >
-      <span className="text-primary">algr</span>OT
+      <span className="text-primary">Sens</span>agro
     </a>
   );
 };
