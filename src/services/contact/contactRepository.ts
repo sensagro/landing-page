@@ -1,23 +1,51 @@
-import { supabase } from "@/lib/supabase/client";
 import type { ContactInsertPayload, ContactSaveResult } from "./types";
 
-const TABLE_NAME = "Contacts";
+const DEFAULT_API_URL = "http://localhost:3000";
 
-const CREDENTIALS_MESSAGE =
-  "Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY to your .env file.";
+function apiBaseUrl(): string {
+  const base = import.meta.env.VITE_API_URL as string | undefined;
+  return (base?.replace(/\/$/, "") || DEFAULT_API_URL);
+}
+
+const MISSING_API_MESSAGE =
+  "API URL is not configured. Set VITE_API_URL in your environment (e.g. in .env).";
 
 export async function saveContact(
-  payload: ContactInsertPayload
+  payload: ContactInsertPayload,
 ): Promise<ContactSaveResult> {
-  if (!supabase) {
-    return { success: false, error: CREDENTIALS_MESSAGE };
+  const url = import.meta.env.VITE_API_URL;
+  if (url !== undefined && typeof url === "string" && url.trim() === "") {
+    return { success: false, error: MISSING_API_MESSAGE };
   }
 
-  const { error } = await supabase.from(TABLE_NAME).insert(payload);
+  try {
+    const res = await fetch(`${apiBaseUrl()}/contacts`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: payload.name.trim(),
+        email: payload.email.trim(),
+        farm: payload.farm.trim() || undefined,
+        message: payload.message.trim() || undefined,
+      }),
+    });
 
-  if (error) {
-    return { success: false, error: error.message };
+    if (!res.ok) {
+      const body = (await res.json().catch(() => null)) as {
+        message?: string | string[];
+      } | null;
+      const message = Array.isArray(body?.message)
+        ? body.message.join(", ")
+        : body?.message;
+      return {
+        success: false,
+        error: message || `Request failed (${res.status})`,
+      };
+    }
+
+    return { success: true };
+  } catch (e) {
+    const message = e instanceof Error ? e.message : "Network error";
+    return { success: false, error: message };
   }
-
-  return { success: true };
 }

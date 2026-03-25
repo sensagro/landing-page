@@ -32,7 +32,7 @@ export const ContactForm = () => {
       toast.success(contact.form.success);
       setFormData(initialFormData);
     } else {
-      toast.error(contact.form.error);
+      toast.error(result.error || contact.form.error);
     }
 
     setIsSubmitting(false);
