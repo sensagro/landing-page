@@ -65,4 +65,4 @@ The production build will be output to the `dist/` directory.
 
 ## License
 
-Copyright © Buenos Aires, Argentina.
+Copyright © Buenos Aires, Argentina
