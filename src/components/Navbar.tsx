@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Logo } from "@/components/common/Logo";
+import { LanguageSwitcher } from "@/components/common/LanguageSwitcher";
 import { DesktopNav } from "@/components/navigation/DesktopNav";
 import { MobileToggle } from "@/components/navigation/MobileToggle";
 import { MobileMenu } from "@/components/navigation/MobileMenu";
@@ -27,9 +28,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <Logo />
 
-        <DesktopNav />
-
-        <MobileToggle isOpen={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)} />
+        <div className="flex items-center gap-2 md:gap-4">
+          <DesktopNav />
+          <LanguageSwitcher />
+          <MobileToggle isOpen={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)} />
+        </div>
       </div>
 
       <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />

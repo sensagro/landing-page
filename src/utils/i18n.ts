@@ -35,16 +35,22 @@ export const setLanguage = (lang: Language): void => {
   }
 };
 
+const languageFromBrowser = (): Language => {
+  const tag =
+    (typeof navigator !== "undefined" &&
+      (navigator.language || navigator.languages?.[0] || "")) ||
+    "";
+  return tag.toLowerCase().startsWith("es") ? "es" : "en";
+};
+
 export const initLanguage = (): void => {
   if (typeof window === "undefined") return;
 
-  // Only check localStorage, default to Spanish if nothing saved
   const savedLang = localStorage.getItem("language") as Language | null;
   if (savedLang && (savedLang === "en" || savedLang === "es")) {
     currentLanguage = savedLang;
   } else {
-    // Always default to Spanish
-    currentLanguage = "es";
+    currentLanguage = languageFromBrowser();
   }
 };
 
