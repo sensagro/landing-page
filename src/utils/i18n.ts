@@ -5,6 +5,7 @@ export type Language = "en" | "es";
 
 type DeepStringify<T> = T extends string
   ? string
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   : T extends Function
   ? T
   : T extends readonly (infer U)[]
