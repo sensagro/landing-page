@@ -72,7 +72,7 @@ describe("ContactForm", () => {
 
     await user.type(screen.getByLabelText("Name"), "  Ana  ");
     await user.type(screen.getByLabelText("Email"), "ana@farm.com");
-    await user.type(screen.getByLabelText("Farm / Company"), "Los Alamos");
+    await user.type(screen.getByLabelText("Company"), "Los Alamos");
     await user.type(
       screen.getByLabelText("Message"),
       "Interested in pricing",
@@ -83,7 +83,7 @@ describe("ContactForm", () => {
       expect(mockedSaveContact).toHaveBeenCalledWith({
         name: "  Ana  ",
         email: "ana@farm.com",
-        farm: "Los Alamos",
+        company: "Los Alamos",
         message: "Interested in pricing",
       });
     });

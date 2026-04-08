@@ -12,7 +12,7 @@ import type { ContactFormData } from "@/types";
 const initialFormData: ContactFormData = {
   name: "",
   email: "",
-  farm: "",
+  company: "",
   message: "",
 };
 
@@ -96,11 +96,11 @@ export const ContactForm = () => {
           />
         </div>
         <FormField
-          label={contact.form.farm}
-          name="farm"
-          value={formData.farm}
-          onChange={(value) => updateField("farm", value)}
-          placeholder={contact.form.farmPlaceholder}
+          label={contact.form.company}
+          name="company"
+          value={formData.company}
+          onChange={(value) => updateField("company", value)}
+          placeholder={contact.form.companyPlaceholder}
         />
         <FormField
           label={contact.form.message}

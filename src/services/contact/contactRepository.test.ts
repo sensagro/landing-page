@@ -18,7 +18,7 @@ describe("saveContact", () => {
     const result = await saveContact({
       name: "  Ana  ",
       email: " ana@farm.com ",
-      farm: "   ",
+      company: "   ",
       message: "",
     });
 
@@ -29,7 +29,7 @@ describe("saveContact", () => {
       body: JSON.stringify({
         name: "Ana",
         email: "ana@farm.com",
-        farm: undefined,
+        company: undefined,
         message: undefined,
       }),
     });
@@ -46,7 +46,7 @@ describe("saveContact", () => {
     await saveContact({
       name: "x",
       email: "y@z.com",
-      farm: "",
+      company: "",
       message: "",
     });
 
@@ -64,12 +64,14 @@ describe("saveContact", () => {
     const result = await saveContact({
       name: "x",
       email: "y@z.com",
-      farm: "",
+      company: "",
       message: "",
     });
 
-    expect(result.success).toBe(false);
-    expect(result.error).toContain("VITE_API_URL");
+    expect(result).toMatchObject({
+      success: false,
+      error: expect.stringContaining("VITE_API_URL"),
+    });
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
@@ -87,7 +89,7 @@ describe("saveContact", () => {
     const result = await saveContact({
       name: "x",
       email: "bad",
-      farm: "",
+      company: "",
       message: "",
     });
 
@@ -108,7 +110,7 @@ describe("saveContact", () => {
     const result = await saveContact({
       name: "x",
       email: "y@z.com",
-      farm: "",
+      company: "",
       message: "",
     });
 
@@ -122,7 +124,7 @@ describe("saveContact", () => {
     const result = await saveContact({
       name: "x",
       email: "y@z.com",
-      farm: "",
+      company: "",
       message: "",
     });
 

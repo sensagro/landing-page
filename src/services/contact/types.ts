@@ -1,7 +1,7 @@
 export interface ContactInsertPayload {
   name: string;
   email: string;
-  farm: string;
+  company: string;
   message: string;
 }
 

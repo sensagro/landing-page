@@ -26,6 +26,6 @@ export interface Reason {
 export interface ContactFormData {
   name: string;
   email: string;
-  farm: string;
+  company: string;
   message: string;
 }

@@ -125,11 +125,11 @@ export const es = {
     form: {
       name: "Nombre",
       email: "Email",
-      farm: "Campo / Empresa",
+      company: "Empresa",
       message: "Mensaje",
       namePlaceholder: "Tu nombre",
       emailPlaceholder: "tu@campo.com",
-      farmPlaceholder: "Nombre de tu campo o empresa",
+      companyPlaceholder: "Nombre de tu empresa u organización",
       messagePlaceholder: "Contanos sobre tu operación...",
       submit: "Enviar Mensaje",
       success: "¡Mensaje enviado! Te vamos a contactar pronto.",

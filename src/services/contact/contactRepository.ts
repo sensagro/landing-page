@@ -25,7 +25,7 @@ export async function saveContact(
       body: JSON.stringify({
         name: payload.name.trim(),
         email: payload.email.trim(),
-        farm: payload.farm.trim() || undefined,
+        company: payload.company.trim() || undefined,
         message: payload.message.trim() || undefined,
       }),
     });
