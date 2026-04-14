@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BackgroundImage } from "@/components/common/BackgroundImage";
-import { smoothScroll } from "@/utils/smoothScroll";
+import { SectionHashLink } from "@/components/navigation/SectionHashLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-sensor.jpg";
 
@@ -57,14 +57,14 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Button variant="hero" size="lg" asChild>
-                <a href="#contact" onClick={(e) => smoothScroll(e, "#contact")}>
+                <SectionHashLink href="#contact" className="inline-flex items-center justify-center">
                   {hero.ctaDemo}
-                </a>
+                </SectionHashLink>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <a href="#how-it-works" onClick={(e) => smoothScroll(e, "#how-it-works")}>
+                <SectionHashLink href="#how-it-works" className="inline-flex items-center justify-center">
                   {hero.ctaHowItWorks}
-                </a>
+                </SectionHashLink>
               </Button>
             </motion.div>
           </div>

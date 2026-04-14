@@ -136,6 +136,63 @@ export const en = {
       error: "Oops, seems our system isn't working right now. Please try again later.",
     },
   },
+  privacy: {
+    title: "Privacy Policy",
+    lastUpdated: "Last updated: April 2026",
+    sections: [
+      {
+        title: "Information We Collect",
+        content:
+          "We collect information you provide when you contact us (name, email, company, message), account data required to use Sensagro services, and technical data from our apps and websites (such as device type and usage) to operate and improve the product.",
+      },
+      {
+        title: "How We Use Your Data",
+        content:
+          "We use your data to provide water monitoring and alerts, communicate with you, maintain security, comply with legal obligations, and improve our services. We do not sell your personal information.",
+      },
+      {
+        title: "Push Notifications",
+        content:
+          "If you enable notifications in the mobile app, we may send alerts about sensor status (for example low water). You can disable notifications at any time in your device or app settings. Push delivery uses third-party providers (e.g. Expo) subject to their privacy policies.",
+      },
+      {
+        title: "Contact",
+        content:
+          "For privacy-related requests, contact us through the form on this website or at the email address provided in your Sensagro correspondence. This policy may be updated; the date at the top reflects the latest revision.",
+      },
+    ],
+  },
+  terms: {
+    title: "Terms of Service",
+    lastUpdated: "Last updated: April 2026",
+    sections: [
+      {
+        title: "Use of the Service",
+        content:
+          "Sensagro provides satellite-linked sensor monitoring tools for agricultural use. You agree to use the service only for lawful purposes and in accordance with these terms and any applicable documentation we provide.",
+      },
+      {
+        title: "Account Registration",
+        content:
+          "You are responsible for maintaining the confidentiality of your account credentials and for activity under your account. Notify us promptly of any unauthorized use.",
+      },
+      {
+        title: "Intellectual Property",
+        content:
+          "Sensagro branding, software, and content are protected by applicable intellectual property laws. You may not copy, reverse engineer, or misuse our services except as expressly permitted.",
+      },
+      {
+        title: "Limitation of Liability",
+        content:
+          "The service is provided on an \"as is\" basis. To the maximum extent permitted by law, Sensagro is not liable for indirect or consequential damages arising from use of the service. Monitoring is a support tool and does not replace on-site verification where required.",
+      },
+      {
+        title: "Contact",
+        content:
+          "Questions about these terms can be directed through our contact channels. Continued use of the service after changes constitutes acceptance of the updated terms where permitted by law.",
+      },
+    ],
+  },
   footer: {
     tagline: "Satellite water monitoring for modern farms.",
     copyright: "Buenos Aires, Argentina.",
@@ -143,6 +200,8 @@ export const en = {
       features: "Features",
       howItWorks: "How It Works",
       contact: "Contact",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
     },
   },
   meta: {

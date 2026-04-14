@@ -1,5 +1,5 @@
-import { smoothScroll } from "@/utils/smoothScroll";
 import type { NavLink as NavLinkType } from "@/types";
+import { SectionHashLink } from "./SectionHashLink";
 
 interface NavLinkProps {
   link: NavLinkType;
@@ -9,18 +9,13 @@ interface NavLinkProps {
 }
 
 export const NavLink = ({ link, onClick, className = "", mobile = false }: NavLinkProps) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    smoothScroll(e, link.href);
-    onClick?.();
-  };
-
   const baseClasses = mobile
     ? "block text-muted-foreground hover:text-foreground transition-colors font-medium"
     : "text-sm text-muted-foreground hover:text-foreground transition-colors font-medium";
 
   return (
-    <a href={link.href} onClick={handleClick} className={`${baseClasses} ${className}`}>
+    <SectionHashLink href={link.href} className={`${baseClasses} ${className}`} onAfterClick={onClick}>
       {link.label}
-    </a>
+    </SectionHashLink>
   );
 };

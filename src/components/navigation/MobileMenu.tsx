@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "./NavLink";
+import { SectionHashLink } from "./SectionHashLink";
 import { getNavLinks } from "@/utils/constants";
-import { smoothScroll } from "@/utils/smoothScroll";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface MobileMenuProps {
@@ -26,15 +26,9 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         <NavLink key={link.href} link={link} mobile onClick={onClose} />
       ))}
       <Button variant="hero" size="sm" className="w-full" asChild>
-        <a
-          href="#contact"
-          onClick={(e) => {
-            smoothScroll(e, "#contact");
-            onClose();
-          }}
-        >
+        <SectionHashLink href="#contact" className="inline-flex w-full items-center justify-center" onAfterClick={onClose}>
           {translations.nav.contactUs}
-        </a>
+        </SectionHashLink>
       </Button>
     </motion.div>
   );

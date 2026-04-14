@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { NavLink } from "./NavLink";
+import { SectionHashLink } from "./SectionHashLink";
 import { getNavLinks } from "@/utils/constants";
-import { smoothScroll } from "@/utils/smoothScroll";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export const DesktopNav = () => {
@@ -14,9 +14,9 @@ export const DesktopNav = () => {
         <NavLink key={link.href} link={link} />
       ))}
       <Button variant="hero" size="sm" asChild>
-        <a href="#contact" onClick={(e) => smoothScroll(e, "#contact")}>
+        <SectionHashLink href="#contact" className="inline-flex items-center justify-center">
           {translations.nav.contactUs}
-        </a>
+        </SectionHashLink>
       </Button>
     </nav>
   );
