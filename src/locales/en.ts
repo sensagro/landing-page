@@ -17,6 +17,9 @@ export const en = {
       "Smart satellite sensors that monitor water trough levels in real time — no towers, no wires, no limits. Built for the Argentine campo.",
     ctaDemo: "Get in Touch",
     ctaHowItWorks: "How It Works",
+    comingSoon: "Coming soon",
+    appStore: "App Store",
+    playStore: "Google Play",
     imageAlt: "Smart water sensor on Argentine farmland at sunset",
   },
   features: {

@@ -17,6 +17,9 @@ export const es = {
       "Sensores satelitales inteligentes que monitorean los niveles de agua en tiempo real — sin torres, sin cables, sin límites. Hecho para el campo argentino.",
     ctaDemo: "Contactanos",
     ctaHowItWorks: "Cómo Funciona",
+    comingSoon: "Próximamente",
+    appStore: "App Store",
+    playStore: "Google Play",
     imageAlt: "Sensor de agua inteligente en campo argentino al atardecer",
   },
   features: {

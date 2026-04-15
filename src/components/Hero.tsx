@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BackgroundImage } from "@/components/common/BackgroundImage";
+import { AppleIcon, GooglePlayIcon } from "@/components/common/StoreIcons";
 import { SectionHashLink } from "@/components/navigation/SectionHashLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-sensor.jpg";
@@ -66,6 +67,31 @@ const Hero = () => {
                   {hero.ctaHowItWorks}
                 </SectionHashLink>
               </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2"
+            >
+              <span className="text-sm text-muted-foreground shrink-0">{hero.comingSoon}</span>
+              <div className="flex items-center gap-5">
+                <SectionHashLink
+                  href="#contact"
+                  className="inline-flex opacity-70 hover:opacity-100 transition-opacity text-white"
+                  aria-label={`${hero.comingSoon} — ${hero.appStore}`}
+                >
+                  <AppleIcon className="h-8 w-8 sm:h-9 sm:w-9" />
+                </SectionHashLink>
+                <SectionHashLink
+                  href="#contact"
+                  className="inline-flex opacity-70 hover:opacity-100 transition-opacity text-white"
+                  aria-label={`${hero.comingSoon} — ${hero.playStore}`}
+                >
+                  <GooglePlayIcon className="h-8 w-8 sm:h-9 sm:w-9" />
+                </SectionHashLink>
+              </div>
             </motion.div>
           </div>
         </div>
