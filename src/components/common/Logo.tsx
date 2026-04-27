@@ -19,7 +19,7 @@ export const Logo = ({ className = "" }: LogoProps) => {
         }
       }}
     >
-      <span className="text-primary">Sens</span>agro
+      Sens<span className="text-gradient">Agro</span>
     </Link>
   );
 };

@@ -38,7 +38,7 @@ const Hero = () => {
               className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-6"
             >
               {hero.title}{" "}
-              <span className="text-gradient glow-text">{hero.titleHighlight}</span>{" "}
+              <span className="text-gradient">{hero.titleHighlight}</span>{" "}
               {hero.titleSuffix}
             </motion.h1>
 

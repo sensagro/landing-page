@@ -5,7 +5,7 @@ export const es = {
   nav: {
     features: "Características",
     howItWorks: "Cómo Funciona",
-    whyAquaSat: "Por Qué Sensagro",
+    whyAquaSat: "Por Qué SensAgro",
     contactUs: "Contactanos",
   },
   hero: {
@@ -82,17 +82,17 @@ export const es = {
     ] as Step[],
   },
   whyAquaSat: {
-    label: "Por Qué Sensagro",
+    label: "Por Qué SensAgro",
     title: "La Forma Más Inteligente de",
     titleHighlight: "Monitorear Agua",
     description:
-      "Las soluciones tradicionales fallan en áreas remotas. Sensagro fue construido específicamente para los desafíos de la ganadería argentina a gran escala.",
+      "Las soluciones tradicionales fallan en áreas remotas. SensAgro fue construido específicamente para los desafíos de la ganadería argentina a gran escala.",
     reasons: [
       {
         icon: Wifi,
         title: "Sin Infraestructura Necesaria",
         description:
-          "A diferencia de las soluciones LoRa o celulares, Sensagro usa conectividad satelital. Sin torres, sin repetidores — solo instalá y listo, incluso en los potreros más remotos.",
+          "A diferencia de las soluciones LoRa o celulares, SensAgro usa conectividad satelital. Sin torres, sin repetidores — solo instalá y listo, incluso en los potreros más remotos.",
       },
       {
         icon: Zap,
@@ -146,7 +146,7 @@ export const es = {
       {
         title: "Información que recopilamos",
         content:
-          "Recopilamos los datos que nos enviás al contactarnos (nombre, email, empresa, mensaje), la información de cuenta necesaria para usar Sensagro y datos técnicos de nuestras apps y sitios (por ejemplo tipo de dispositivo y uso) para operar y mejorar el producto.",
+          "Recopilamos los datos que nos enviás al contactarnos (nombre, email, empresa, mensaje), la información de cuenta necesaria para usar SensAgro y datos técnicos de nuestras apps y sitios (por ejemplo tipo de dispositivo y uso) para operar y mejorar el producto.",
       },
       {
         title: "Cómo usamos tus datos",
@@ -161,7 +161,7 @@ export const es = {
       {
         title: "Contacto",
         content:
-          "Para consultas de privacidad, contactanos mediante el formulario de este sitio o el correo indicado en tu correspondencia con Sensagro. Esta política puede actualizarse; la fecha arriba refleja la última revisión.",
+          "Para consultas de privacidad, contactanos mediante el formulario de este sitio o el correo indicado en tu correspondencia con SensAgro. Esta política puede actualizarse; la fecha arriba refleja la última revisión.",
       },
     ],
   },
@@ -172,7 +172,7 @@ export const es = {
       {
         title: "Uso del servicio",
         content:
-          "Sensagro ofrece herramientas de monitoreo con sensores vinculados por satélite para uso agropecuario. Aceptás usar el servicio solo con fines lícitos y de acuerdo con estos términos y la documentación aplicable.",
+          "SensAgro ofrece herramientas de monitoreo con sensores vinculados por satélite para uso agropecuario. Aceptás usar el servicio solo con fines lícitos y de acuerdo con estos términos y la documentación aplicable.",
       },
       {
         title: "Registro de cuenta",
@@ -182,12 +182,12 @@ export const es = {
       {
         title: "Propiedad intelectual",
         content:
-          "La marca Sensagro, el software y el contenido están protegidos por las leyes de propiedad intelectual aplicables. No podés copiar, realizar ingeniería inversa ni hacer un uso indebido del servicio salvo lo expresamente permitido.",
+          "La marca SensAgro, el software y el contenido están protegidos por las leyes de propiedad intelectual aplicables. No podés copiar, realizar ingeniería inversa ni hacer un uso indebido del servicio salvo lo expresamente permitido.",
       },
       {
         title: "Limitación de responsabilidad",
         content:
-          "El servicio se ofrece \"tal cual\". En la medida máxima permitida por la ley, Sensagro no es responsable por daños indirectos o consecuentes derivados del uso del servicio. El monitoreo es una herramienta de apoyo y no reemplaza la verificación en campo cuando sea necesaria.",
+          "El servicio se ofrece \"tal cual\". En la medida máxima permitida por la ley, SensAgro no es responsable por daños indirectos o consecuentes derivados del uso del servicio. El monitoreo es una herramienta de apoyo y no reemplaza la verificación en campo cuando sea necesaria.",
       },
       {
         title: "Contacto",
@@ -208,9 +208,9 @@ export const es = {
     },
   },
   meta: {
-    title: "Sensagro",
+    title: "SensAgro",
     description: "Sensores satelitales de nivel de agua para campos ganaderos. Monitoreá bebederos en tiempo real sin infraestructura necesaria.",
-    ogTitle: "Sensagro",
+    ogTitle: "SensAgro",
     ogDescription: "Sensores satelitales inteligentes que monitorean los niveles de agua en tiempo real para campos argentinos.",
   },
 } as const;
