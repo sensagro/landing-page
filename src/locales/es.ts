@@ -141,58 +141,63 @@ export const es = {
   },
   privacy: {
     title: "Política de Privacidad",
-    lastUpdated: "Última actualización: Abril 2026",
+    lastUpdated: "Última actualización: 28 de abril de 2026",
     sections: [
       {
         title: "Información que recopilamos",
         content:
-          "Recopilamos los datos que nos enviás al contactarnos (nombre, email, empresa, mensaje), la información de cuenta necesaria para usar SensAgro y datos técnicos de nuestras apps y sitios (por ejemplo tipo de dispositivo y uso) para operar y mejorar el producto.",
+          "Recopilamos los datos que nos enviás al contactarnos o crear una cuenta, incluyendo nombre, email, campo o empresa y mensajes. Cuando el servicio está activo, también procesamos identificadores de sensores, cuentas asignadas, lecturas de nivel de agua, telemetría de batería y temperatura, ubicación aproximada del sensor, tokens de notificaciones push y registros operativos necesarios para operar SensAgro.",
       },
       {
         title: "Cómo usamos tus datos",
         content:
-          "Usamos tus datos para brindar monitoreo y alertas de agua, comunicarnos con vos, mantener la seguridad, cumplir obligaciones legales y mejorar el servicio. No vendemos tu información personal.",
+          "Usamos estos datos para operar el monitoreo satelital de agua, mostrar el estado de sensores en la app y el portal interno, enviar alertas de agua baja o falta de señal, brindar soporte, proteger cuentas, investigar incidentes y mejorar el producto. No vendemos información personal.",
       },
       {
-        title: "Notificaciones push",
+        title: "Base legal y derechos",
         content:
-          "Si activás notificaciones en la app móvil, podemos enviar alertas sobre el estado de los sensores (por ejemplo agua baja). Podés desactivarlas en cualquier momento en la configuración del dispositivo o de la app. El envío de push utiliza proveedores de terceros (por ejemplo Expo) sujetos a sus políticas de privacidad.",
+          "Para usuarios de Argentina, esta política busca alinearse con la Ley 25.326 de Protección de Datos Personales. Podés solicitar acceso, rectificación, actualización o eliminación de tus datos personales mediante el formulario del sitio o tu contacto habitual de soporte de SensAgro.",
       },
       {
-        title: "Contacto",
+        title: "Proveedores y conservación",
         content:
-          "Para consultas de privacidad, contactanos mediante el formulario de este sitio o el correo indicado en tu correspondencia con SensAgro. Esta política puede actualizarse; la fecha arriba refleja la última revisión.",
+          "SensAgro utiliza proveedores de infraestructura como Firebase, Expo, Myriota, servicios de hosting y base de datos para entregar el producto. Conservamos datos operativos solo durante el tiempo necesario para prestar el servicio, cumplir obligaciones legales, mantener seguridad, brindar soporte y evaluar pilotos, salvo que la ley exija un plazo mayor.",
+      },
+      {
+        title: "Contacto y actualizaciones",
+        content:
+          "Para consultas de privacidad, contactanos mediante el formulario de este sitio o el correo de soporte usado en tu correspondencia con SensAgro. Esta política de base para pilotos puede actualizarse a medida que el producto y la revisión legal maduren; la fecha superior refleja la última revisión.",
       },
     ],
   },
   terms: {
     title: "Términos de Servicio",
-    lastUpdated: "Última actualización: Abril 2026",
+    lastUpdated: "Última actualización: 28 de abril de 2026",
     sections: [
       {
-        title: "Uso del servicio",
+        title: "Descripción del servicio",
         content:
-          "SensAgro ofrece herramientas de monitoreo con sensores vinculados por satélite para uso agropecuario. Aceptás usar el servicio solo con fines lícitos y de acuerdo con estos términos y la documentación aplicable.",
+          "SensAgro ofrece herramientas de monitoreo satelital de bebederos para uso agropecuario, incluyendo acceso móvil para productores, herramientas internas de administración, ingesta de datos de sensores y envío de alertas. Durante los pilotos, las funcionalidades, precios, configuración de hardware y disponibilidad pueden cambiar mientras validamos el servicio.",
       },
       {
-        title: "Registro de cuenta",
+        title: "Cuentas y uso aceptable",
         content:
-          "Sos responsable de mantener la confidencialidad de tus credenciales y de la actividad bajo tu cuenta. Avisanos de inmediato ante cualquier uso no autorizado.",
+          "Sos responsable de mantener seguras tus credenciales y de usar el servicio solo para operaciones agropecuarias lícitas. No intentes interferir con la plataforma, acceder a datos de otro usuario, manipular dispositivos o usar el servicio de una forma que pueda dañar a SensAgro, su infraestructura u otros usuarios.",
       },
       {
-        title: "Propiedad intelectual",
+        title: "Piloto, suspensión y disponibilidad",
         content:
-          "La marca SensAgro, el software y el contenido están protegidos por las leyes de propiedad intelectual aplicables. No podés copiar, realizar ingeniería inversa ni hacer un uso indebido del servicio salvo lo expresamente permitido.",
+          "SensAgro puede suspender o limitar el acceso a cuentas, sensores o funcionalidades cuando sea necesario por seguridad, falta de pago, uso indebido, baja de cuenta u operación del piloto. La conectividad satelital, el estado del dispositivo, el clima, la calidad de instalación y proveedores externos pueden afectar la disponibilidad, por lo que el servicio debe tratarse como una herramienta de monitoreo y no como la única fuente de verdad para bienestar animal o gestión de agua.",
       },
       {
-        title: "Limitación de responsabilidad",
+        title: "Propiedad intelectual y datos",
         content:
-          "El servicio se ofrece \"tal cual\". En la medida máxima permitida por la ley, SensAgro no es responsable por daños indirectos o consecuentes derivados del uso del servicio. El monitoreo es una herramienta de apoyo y no reemplaza la verificación en campo cuando sea necesaria.",
+          "El software, marca, documentación y contenido del sitio de SensAgro pertenecen a SensAgro o sus licenciantes. Los datos del campo y sensores permanecen asociados a la cuenta del cliente; SensAgro puede procesarlos para operar, brindar soporte, proteger y mejorar el servicio según la Política de Privacidad.",
       },
       {
-        title: "Contacto",
+        title: "Sin garantía, ley aplicable y cambios",
         content:
-          "Las consultas sobre estos términos pueden dirigirse por nuestros canales de contacto. El uso continuado del servicio tras cambios implica la aceptación de los términos actualizados cuando la ley lo permita.",
+          "Durante la etapa piloto, el servicio se ofrece \"tal cual\" y \"según disponibilidad\". En la medida máxima permitida por la ley, SensAgro no es responsable por daños indirectos o consecuentes derivados del uso del servicio. Estos términos se rigen por las leyes de Argentina. Podemos actualizarlos a medida que el producto madure; el uso continuado tras los cambios implica aceptación cuando la ley lo permita.",
       },
     ],
   },

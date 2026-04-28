@@ -141,58 +141,63 @@ export const en = {
   },
   privacy: {
     title: "Privacy Policy",
-    lastUpdated: "Last updated: April 2026",
+    lastUpdated: "Last updated: April 28, 2026",
     sections: [
       {
-        title: "Information We Collect",
+        title: "Information we collect",
         content:
-          "We collect information you provide when you contact us (name, email, company, message), account data required to use SensAgro services, and technical data from our apps and websites (such as device type and usage) to operate and improve the product.",
+          "We collect the information you provide when you contact us or create an account, including name, email, farm or company name, and messages. When the service is active, we also process sensor identifiers, assigned user accounts, water-level readings, battery and temperature telemetry, approximate sensor location, push notification tokens, and operational logs needed to run SensAgro.",
       },
       {
-        title: "How We Use Your Data",
+        title: "How we use your data",
         content:
-          "We use your data to provide water monitoring and alerts, communicate with you, maintain security, comply with legal obligations, and improve our services. We do not sell your personal information.",
+          "We use this data to operate satellite water monitoring, show sensor status in the app and admin portal, send low-water or signal alerts, provide support, protect accounts, troubleshoot incidents, and improve the product. We do not sell personal information.",
       },
       {
-        title: "Push Notifications",
+        title: "Legal basis and rights",
         content:
-          "If you enable notifications in the mobile app, we may send alerts about sensor status (for example low water). You can disable notifications at any time in your device or app settings. Push delivery uses third-party providers (e.g. Expo) subject to their privacy policies.",
+          "For Argentine users, this policy is intended to align with Ley 25.326 de Protección de Datos Personales. You may request access, correction, update, or deletion of your personal data through the website contact form or your usual SensAgro support contact.",
       },
       {
-        title: "Contact",
+        title: "Service providers and retention",
         content:
-          "For privacy-related requests, contact us through the form on this website or at the email address provided in your SensAgro correspondence. This policy may be updated; the date at the top reflects the latest revision.",
+          "SensAgro uses infrastructure providers such as Firebase, Expo, Myriota, hosting providers, and database services to deliver the product. We keep operational data only as long as needed for service delivery, legal obligations, security, support, and pilot evaluation, unless a longer retention period is required by law.",
+      },
+      {
+        title: "Contact and updates",
+        content:
+          "For privacy-related requests, contact us through the form on this website or through the support email used in your SensAgro correspondence. This pilot-grade policy may be updated as the product and legal review mature; the date above reflects the latest revision.",
       },
     ],
   },
   terms: {
     title: "Terms of Service",
-    lastUpdated: "Last updated: April 2026",
+    lastUpdated: "Last updated: April 28, 2026",
     sections: [
       {
-        title: "Use of the Service",
+        title: "Service description",
         content:
-          "SensAgro provides satellite-linked sensor monitoring tools for agricultural use. You agree to use the service only for lawful purposes and in accordance with these terms and any applicable documentation we provide.",
+          "SensAgro provides satellite-linked water trough monitoring tools for agricultural use, including mobile access for farmers, internal administration tools, sensor data ingestion, and alert delivery. During pilots, features, pricing, hardware configuration, and availability may change as we validate the service.",
       },
       {
-        title: "Account Registration",
+        title: "Accounts and acceptable use",
         content:
-          "You are responsible for maintaining the confidentiality of your account credentials and for activity under your account. Notify us promptly of any unauthorized use.",
+          "You are responsible for keeping your account credentials secure and for using the service only for lawful agricultural operations. Do not attempt to interfere with the platform, access another user's data, tamper with devices, or use the service in a way that could harm SensAgro, its infrastructure, or other users.",
       },
       {
-        title: "Intellectual Property",
+        title: "Pilot service, suspension, and availability",
         content:
-          "SensAgro branding, software, and content are protected by applicable intellectual property laws. You may not copy, reverse engineer, or misuse our services except as expressly permitted.",
+          "SensAgro may suspend or limit access to accounts, sensors, or features when needed for security, non-payment, misuse, offboarding, or pilot operations. Satellite connectivity, device condition, weather, installation quality, and third-party providers can affect availability, so the service should be treated as a monitoring aid rather than the only source of truth for animal welfare or water management.",
       },
       {
-        title: "Limitation of Liability",
+        title: "Intellectual property and data",
         content:
-          "The service is provided on an \"as is\" basis. To the maximum extent permitted by law, SensAgro is not liable for indirect or consequential damages arising from use of the service. Monitoring is a support tool and does not replace on-site verification where required.",
+          "SensAgro software, branding, documentation, and website content remain the property of SensAgro or its licensors. Farm and sensor data remains associated with the customer account; SensAgro may process it to operate, support, secure, and improve the service as described in the Privacy Policy.",
       },
       {
-        title: "Contact",
+        title: "No warranty, governing law, and updates",
         content:
-          "Questions about these terms can be directed through our contact channels. Continued use of the service after changes constitutes acceptance of the updated terms where permitted by law.",
+          "The service is provided on an \"as is\" and \"as available\" basis during the pilot phase. To the maximum extent permitted by law, SensAgro is not liable for indirect or consequential damages arising from use of the service. These terms are governed by the laws of Argentina. We may update them as the product matures; continued use after changes constitutes acceptance where permitted by law.",
       },
     ],
   },
