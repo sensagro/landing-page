@@ -137,6 +137,9 @@ export const es = {
       submit: "Enviar Mensaje",
       success: "¡Mensaje enviado! Te vamos a contactar pronto.",
       error: "Ups, parece que nuestro sistema no está funcionando. Por favor intentá de nuevo más tarde.",
+      invalidEmail: "Por favor ingresá un email válido.",
+      messageTooLong: "El mensaje debe tener menos de 2000 caracteres.",
+      invalidMessage: "Por favor incluí un mensaje, no solo un enlace.",
     },
   },
   privacy: {

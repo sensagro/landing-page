@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
@@ -11,6 +12,7 @@ import Terms from "./pages/Terms";
 
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="dark">
+    <Analytics />
     <LanguageProvider>
       <TooltipProvider>
         <Sonner />

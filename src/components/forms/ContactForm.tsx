@@ -9,6 +9,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { saveContact } from "@/services/contact";
 import type { ContactFormData } from "@/types";
 
+const URL_ONLY_RE = /^https?:\/\/\S+$/i;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const initialFormData: ContactFormData = {
   name: "",
   email: "",
@@ -20,12 +23,34 @@ export const ContactForm = () => {
   const { translations } = useLanguage();
   const { contact } = translations;
   const [formData, setFormData] = useState<ContactFormData>(initialFormData);
+  const [honeypot, setHoneypot] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
+    // Honeypot — bots fill hidden fields, humans never see them
+    if (honeypot) {
+      toast.success(contact.form.success);
+      return;
+    }
+
+    if (!EMAIL_RE.test(formData.email)) {
+      toast.error(contact.form.invalidEmail);
+      return;
+    }
+
+    if (formData.message.length > 2000) {
+      toast.error(contact.form.messageTooLong);
+      return;
+    }
+
+    if (URL_ONLY_RE.test(formData.message.trim())) {
+      toast.error(contact.form.invalidMessage);
+      return;
+    }
+
+    setIsSubmitting(true);
     const result = await saveContact(formData);
 
     if (result.success) {
@@ -76,6 +101,18 @@ export const ContactForm = () => {
         onSubmit={handleSubmit}
         className="glass rounded-2xl p-8 space-y-5"
       >
+        {/* Honeypot — hidden from users, filled by bots */}
+        <div style={{ display: "none" }} aria-hidden="true">
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <FormField
             label={contact.form.name}

@@ -137,6 +137,9 @@ export const en = {
       submit: "Send Message",
       success: "Message sent! We'll get back to you soon.",
       error: "Oops, seems our system isn't working right now. Please try again later.",
+      invalidEmail: "Please enter a valid email address.",
+      messageTooLong: "Message must be under 2000 characters.",
+      invalidMessage: "Please include a message, not just a link.",
     },
   },
   privacy: {
